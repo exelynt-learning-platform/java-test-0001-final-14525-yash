@@ -1,0 +1,24 @@
+public class Pattern {
+    public static void main(String[] args) {
+
+        int n = 8; // height of middle part
+
+        // Top single star
+        System.out.println("*");
+
+        // Middle part
+        for (int i = 1; i <= n; i++) {
+            System.out.print("*");
+
+            // spaces in between
+            for (int j = 1; j <= 2; j++) {
+                System.out.print(" ");
+            }
+
+            System.out.println("*");
+        }
+
+        // Bottom single star
+        System.out.println("*");
+    }
+}
