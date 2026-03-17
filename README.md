@@ -13,7 +13,6 @@ Pattern Output
 010101
 
 Logic Used
-
 * The program uses two loops:
   * Outer loop → controls number of rows
   * Inner loop → prints elements in each row
