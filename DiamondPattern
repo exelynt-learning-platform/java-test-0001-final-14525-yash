@@ -1,38 +1,43 @@
-public class SolidDiamond {
-
-    private static final int TOTAL_ROWS = 9;
-
+public class Pattern {
     public static void main(String[] args) {
 
-        int n = TOTAL_ROWS / 2;
+        int n = 4; // controls height
 
-        // 🔺 Upper part
-        for (int i = 0; i <= n; i++) {
+        // Top part
+        for (int i = 1; i <= n; i++) {
 
-            // spaces
-            for (int j = 0; j < n - i; j++) {
+            // Spaces
+            for (int j = i; j < n; j++) {
                 System.out.print(" ");
             }
 
-            // stars
-            for (int j = 0; j < 2 * i + 1; j++) {
-                System.out.print("*");
+            // Stars
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                if (j == 1 || j == (2 * i - 1)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
             }
 
             System.out.println();
         }
 
-        // 🔻 Lower part
-        for (int i = n - 1; i >= 0; i--) {
+        // Bottom part
+        for (int i = n - 1; i >= 1; i--) {
 
-            // spaces
-            for (int j = 0; j < n - i; j++) {
+            // Spaces
+            for (int j = n; j > i; j--) {
                 System.out.print(" ");
             }
 
-            // stars
-            for (int j = 0; j < 2 * i + 1; j++) {
-                System.out.print("*");
+            // Stars
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                if (j == 1 || j == (2 * i - 1)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
             }
 
             System.out.println();
