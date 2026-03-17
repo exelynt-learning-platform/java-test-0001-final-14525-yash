@@ -1,6 +1,6 @@
 public class DiamondPattern {
+public class HollowDiamond {
 
-  
     private static final int TOTAL_ROWS = 9;
 
     public static void main(String[] args) {
@@ -9,23 +9,34 @@ public class DiamondPattern {
 
         for (int i = 0; i < TOTAL_ROWS; i++) {
 
-          
             int distance = Math.abs(mid - i);
 
-          
+            // Print leading spaces
             for (int j = 0; j < distance; j++) {
                 System.out.print(" ");
             }
 
-          
-            if (distance == mid) {
-              
+            // Print stars with hollow logic
+            int innerSpace = TOTAL_ROWS - 2 * distance - 2;
+
+            if (innerSpace < 0) {
+                // Top and bottom row
                 System.out.print("*");
             } else {
-                
-                System.out.print("* *");
+                System.out.print("*");
+
+                // Inner hollow space
+                for (int j = 0; j < innerSpace; j++) {
+                    System.out.print(" ");
+                }
+
+                System.out.print("*");
             }
 
+            System.out.println();
+        }
+    }
+}
             System.out.println();
         }
     }
