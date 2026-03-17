@@ -1,5 +1,6 @@
 Java Test 0001 - Diamond Pattern
 
+
 📌 Project Description
 
 This project implements a Java program to print a diamond pattern using stars ("*").
