@@ -1,24 +1,46 @@
-public class Pattern {
+public class DiamondPattern {
     public static void main(String[] args) {
 
-        int n = 8; // height of middle part
+        int n = 4;
 
-        // Top single star
-        System.out.println("*");
-
-        // Middle part
+        // Upper part
         for (int i = 1; i <= n; i++) {
-            System.out.print("*");
 
-            // spaces in between
-            for (int j = 1; j <= 2; j++) {
+            // spaces
+            for (int j = i; j < n; j++) {
                 System.out.print(" ");
             }
 
-            System.out.println("*");
+            // stars
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                if (j == 1 || j == (2 * i - 1)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
         }
 
-        // Bottom single star
-        System.out.println("*");
+        // Lower part
+        for (int i = n - 1; i >= 1; i--) {
+
+            // spaces
+            for (int j = n; j > i; j--) {
+                System.out.print(" ");
+            }
+
+            // stars
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                if (j == 1 || j == (2 * i - 1)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            System.out.println();
+        }
     }
 }
